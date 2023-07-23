@@ -1,0 +1,42 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+label {
+  display: inline-block;
+  width: 120px;
+}
+
+ol {
+  width: 2000px;
+}
+
+div {
+  width: 130px;
+}
+
+button {
+  width: 70px;
+}
+
+#msg {
+  color: red;
+  width: 200px;
+}
+
+a {
+  color: #00b7ff;
+}
+
+.left-box {
+  background: #ffffdd;
+  float: left;
+  width: 50%;
+}
+
+.right-box {
+  background: #ddffff;
+  float: right;
+  width: 50%;
+}

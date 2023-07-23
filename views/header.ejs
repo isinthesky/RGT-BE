@@ -1,0 +1,6 @@
+<a href="/">Home</a>
+<% if (user) { %>
+<a href="/auth/google/logout">로그아웃</a>
+<% } else { %>
+<a href="/auth/google">Google 로그인</a>
+<% } %>
