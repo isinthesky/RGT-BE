@@ -1,6 +1,5 @@
-import express, { NextFunction } from "express";
-import { Request, Response } from "express"; // 추가
-import passport, { DoneFunction } from "passport"; // 수정
+import express, { NextFunction, Request, Response } from "express";
+import passport from "passport"; // 수정
 
 const router = express.Router();
 
@@ -13,7 +12,7 @@ router.get("/google", passport.authenticate("google"));
 router.get(
   "/google/callback",
   passport.authenticate("google", {
-    successReturnToOrRedirect: "/user",
+    successReturnToOrRedirect: "/",
     failureRedirect: "/auth/login",
     failureMessage: true,
   })

@@ -1,0 +1,40 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <%- include(`./header`) %>
+    <h1>Order Edit</h1>
+    <form action="/order/replace" method="post">
+      <input list="fields" name="field" id="field">
+      <datalist id="fields">
+        <option value="prodect_name">
+        <option value="table_no">
+        <option value="quantity">
+        <option value="robot_status">
+        <option value="seq">
+      </datalist>
+      <p>
+        <label for="find"> Find : </label>
+        <input type="text" id="find" name="find" required/>
+      </p>
+      <p>
+        <label for="replace">Replace : </label>
+        <input type="text" id="replace" name="replace" required/>
+      </p>
+      <button type="submit">Replace</button>
+    </form>
+
+    <h1>warning</h1>
+    <form action="/order/duplicate" method="post">
+      <p>
+        <button type="submit" id="duplicate" name="duplicate">duplicate</button>
+      </p>
+    </form>
+  </body>
+</html>

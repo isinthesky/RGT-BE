@@ -7,7 +7,15 @@
   </head>
   <body>
     <%- include(`./header`) %>
-    <h1>User Page</h1>
-    <h2>Hello, <%= name %></h2>
+    <h1>Hello, <%= name %></h1>
+
+    <% if (user) { %>
+      <p>
+        <a href="/order">User Order</a>
+      </p>
+      <p>
+        <a href="/order/edit">Order Edit</a>
+      </p>
+      <% } %>
   </body>
 </html>

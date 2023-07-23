@@ -6,6 +6,20 @@
   </head>
   <body>
     <%- include(`./header`) %>
-    <h1>Index Page</h1>
+    <h1>Welcome RGT</h1>
+
+    <% if (user) { %>
+    <p>
+      <a href="/user">User Page</a>
+    </p>
+    <% } %>
+    <label>order_date</label><label>order_time</label><label>order_id</label><label>prodect_name</label><label>table_no</label><label>quantity</label>
+    <ol id="list">
+    <% for (let i = 0; i < orders.length; i++) { %>
+      <li>
+        <label><%= orders[i].order_date %></label> <label><%= orders[i].order_time %></label><label><%= orders[i].order_id %></label><label><%= orders[i].prodect_name %></label><label><%= orders[i].table_no %></label><label><%= orders[i].quantity %></label>
+      </li>
+    <% } %>
+    </ol>
   </body>
 </html>

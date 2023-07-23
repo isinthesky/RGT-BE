@@ -40,3 +40,9 @@ a {
   float: right;
   width: 50%;
 }
+
+form {
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 10px;
+}

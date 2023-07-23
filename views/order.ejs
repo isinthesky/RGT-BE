@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <%- include(`./header`) %>
+    <h1>Order</h1>
+    <form action="/order" method="post">
+      <p>
+        <label for="order_id">order_id : </label>
+        <input type="text" id="order_id" name="order_id" required />
+      </p>
+      <p>
+        <label for="prodect_name">prodect_name : </label>
+        <input type="text" id="prodect_name" name="prodect_name" required />
+      </p>
+      <p>
+        <label for="table_no">table_no : </label>
+        <input type="number" id="table_no" name="table_no" required />
+      </p>
+      <p>
+        <label for="quantity">quantity : </label>
+        <input type="number" id="quantity" name="quantity" required />
+      </p>
+      <p>
+        <label for="dong">dong : </label>
+        <input type="text" id="dong" name="dong" />
+      </p>
+      <p>
+        <label for="ho">ho : </label>
+        <input type="text" id="ho" name="ho" />
+      </p>
+      <p>
+        <label for="seq">seq : </label>
+        <input type="text" id="seq" name="seq" />
+      </p>
+      <p>
+        <label for="options">options : </label>
+        <input type="text" id="options" name="options" />
+      </p>
+      <p>
+        <button type="submit" id="order" name="order">order</button>
+      </p>
+      <input type="hidden" id="orderer_name" name="orderer_name" value= <%= orderer %>>
+    </form>
+  </body>
+</html>
