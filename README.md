@@ -1,23 +1,23 @@
 # RGT-BE
 
-# 개요
+## 개요
 
 두가지 요구사항을 한개의 프로젝트로 구현해 보았습니다.
 구글 로그인을 통해 권한을 획득하고 해당 권한 을 통해 DB 제어 페이지에 접근할 수 있도록 했습니다.
 
-# 기술스택
+## 기술스택
 
-## rest api 구현
+### rest api 구현
 
 typescript - mysql - Nodejs - prisma - express
 
-## Google oAuth 구현
+### Google oAuth 구현
 
 typescript - Nodejs - express - passport
 
-# 구현내용
+## 구현내용
 
-## rest api
+### rest api
 
 Mysql을 Nodejs의 대표적인 ORM인 Prisma를 이용하여 제어했습니다.
 DB table을 prisma를 이용하여 schema-first 한 방식으로 생성했습니다.
@@ -53,7 +53,7 @@ Google oAuth Login을 passport library를 활용하여 구현했습니다.
 1. Google Cloud에 RGT 프로젝트를 새로 생성했습니다.
 2. 인증키를 받아 clientID, secretPW를 받아 dotenv를 활용하여 넣어줬습니다.
 
-# RGT BE 어플리케이션 시나리오
+## RGT BE 어플리케이션 시나리오
 
 1. 메인페이지에 접속한다. - 주문 목록이 메인페이지에 풀력된다.
 2. 상단에 로그인 버튼을 이용하여 Google 인증 절차를 거친다.
