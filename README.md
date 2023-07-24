@@ -22,7 +22,7 @@ typescript - Nodejs - express - passport
 Mysql을 Nodejs의 대표적인 ORM인 Prisma를 이용하여 제어했습니다.
 DB table을 prisma를 이용하여 schema-first 한 방식으로 생성했습니다.
 
-./root/prisma/schema.prisma에 prisma-schema를 작성했습니다.
+./root/prisma/schema.prisma에 prisma-schema를 작성했습니다.<br>
 ./root/src/controllers/order.controller.ts에 DB를 제어하는 코드를 구현했습니다.
 
 ### 중복제거
@@ -47,7 +47,7 @@ replace 함수를 만들어 레코드의 내용 변경을 위한 코드를 구�
 
 Google oAuth Login을 passport library를 활용하여 구현했습니다.
 
-./root/src/config/passport.ts에 passport 라이브러리를 설정했습니다.
+./root/src/config/passport.ts에 passport 라이브러리를 설정했습니다.<br>
 ./root/src/routers/auth.router.ts에 Google 로그인과 관련된 주소를 담았습니다.
 
 1. Google Cloud에 RGT 프로젝트를 새로 생성했습니다.
