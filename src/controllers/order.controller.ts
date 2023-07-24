@@ -79,9 +79,10 @@ const duplicate = async function (req: Request, res: Response, next: NextFunctio
 
 const replace = async function (req: Request, res: Response, next: NextFunction) {
   try {
-    const findQuery = {};
+    const findQuery: Record<string, string> = {};
     findQuery[req.body.field] = req.body.find;
-    const updateQuery = {};
+
+    const updateQuery: Record<string, string> = {};
     updateQuery[req.body.field] = req.body.replace;
 
     const replaceOrder = await prisma.order.updateMany({

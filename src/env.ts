@@ -8,3 +8,4 @@ export const GOOGLE_AUTH_URI = process.env.GOOGLE_AUTH_URI;
 export const GOOGLE_AUTH_CLIENTID = process.env.GOOGLE_AUTH_CLIENTID;
 export const GOOGLE_AUTH_PASSWORD = process.env.GOOGLE_AUTH_PASSWORD;
 export const GOOGLE_AUTH_REDIRECTIONURL = process.env.GOOGLE_AUTH_REDIRECTIONURL;
+export const COOKIE_SECRET = process.env.COOKIE_SECRET;
