@@ -3,6 +3,7 @@
 # 개요
 
 두가지 요구사항을 한개의 프로젝트로 구현해 보았습니다.
+구글 로그인을 통해 권한을 획득하고 해당 권한 을 통해 DB 제어 페이지에 접근할 수 있도록 했습니다.
 
 # 기술스택
 
@@ -21,15 +22,16 @@ typescript - Nodejs - express - passport
 Mysql을 Nodejs의 대표적인 ORM인 Prisma를 이용하여 제어했습니다.
 DB table을 prisma를 이용하여 schema-first 한 방식으로 생성했습니다.
 
+./root/prisma/schema.prisma에 prisma-schema를 작성했씁니다.
 ./root/src/controllers/order.controller.ts에 DB를 제어하는 코드를 구현했습니다.
 
 ### 중복제거
 
 duplicate 함수를 만들어 중복제거를 위한 코드를 구현했습니다.
 
-1. 모든 레코드를 읽으며 order_id를 읽고 Map 자료구조를 활용하였습니다.
-2. Map에 order_id는 Key 값으로 중복 개수는 Value 값을 주었습니다.
-3. Map의 자료들을 순회하며 order_id로 Where로 1개 값을 select 한 후에 해당 레코드를 Delete 했습니다.
+1. 모든 레코드의 order_id를 읽고 Map 자료구조를 활용하였습니다.
+2. Map에 Key 값으로 order_id를 , Value 값에 중복 개수를 count 하기위해 사용했습니다.
+3. 쌓인 Map의 자료들을 순회하며 order_id로 Where로 1개 값을 select 한 후에 해당 레코드를 Delete 했습니다.
 4. 기존에 등록된 레코드 1개는 남겨야 하기 때문에 중복 개수에 -1을 하여 해결했습니다.
 
 ### 레코드 내용 변경
@@ -55,5 +57,8 @@ Google oAuth Login을 passport library를 활용하여 구현했습니다.
 
 1. 메인페이지에 접속한다. - 주문 목록이 메인페이지에 풀력된다.
 2. 상단에 로그인 버튼을 이용하여 Google 인증 절차를 거친다.
-3. 로그인을 하고 유저의 세션 정보는 서버 메모리에 저장됩니다.
-4.
+3. 로그인을 하고 유저의 세션 정보는 서버 메모리에 저장됩니다. - 서버가 재시작 될경우 사라집니다.
+4. 세션 정보의 유무를 체크하여 로그인 상태를 확인하고 개인 화면으로 진입 가능하게 합니다.
+5. 개인 화면에서 new order 페이지를 통하여 새로운 주문을 추가 할 수 있습니다.
+6. 개인 화면에서 edit order 페이지를 통하여 중복제거와 데이터 통합 수정을 할 수 있습니다.
+7. RGT 웹 어플리케이션을 사용중에 session 정보가 사라진다면 fetchTodo 함수를 구현하여. 메인페이지로 이동합니다.
