@@ -1,4 +1,4 @@
-# typscript-GoogleoAuth-prisma-mysql
+# fac-report-server
 
 ## 기술스택
 
