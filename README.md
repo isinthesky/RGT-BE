@@ -48,7 +48,7 @@ Google oAuth Login을 passport library를 활용하여 구현했습니다.
 1. Google Cloud에 RGT 프로젝트를 새로 생성했습니다.
 2. 인증키를 받아 clientID, secretPW를 받아 dotenv를 활용하여 넣어줬습니다.
 
-## RGT BE 어플리케이션 시나리오
+## User Scenario
 
 1. 메인 페이지에 접속한다. - 주문 목록이 메인 페이지에 풀력된다.
 2. 상단에 로그인 버튼을 이용하여 Google 인증 절차를 거친다.
@@ -56,4 +56,4 @@ Google oAuth Login을 passport library를 활용하여 구현했습니다.
 4. 세션 정보의 유무를 체크하여 로그인 상태를 확인하고 개인 화면으로 진입 가능하게 합니다.
 5. 개인 화면에서 new order 페이지를 통하여 새로운 주문을 추가할 수 있습니다.
 6. 개인 화면에서 edit order 페이지를 통하여 중복제거와 데이터 통합 수정을 할 수 있습니다.
-7. RGT 웹 어플리케이션을 사용 중에 session 정보가 사라진다면 fetchTodo 함수를 구현하여. 메인 페이지로 이동합니다.
+7. 웹 어플리케이션을 사용 중에 session 정보가 사라진다면 fetchTodo 함수를 구현하여. 메인 페이지로 이동합니다.
