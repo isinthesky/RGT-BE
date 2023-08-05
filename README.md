@@ -1,4 +1,4 @@
-# fac-report-server
+# typescript-prisma-passport-googleoAuth
 
 ## 기술스택
 
